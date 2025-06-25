@@ -1,0 +1,38 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* https://blog-assets.thedyrt.com/uploads/2020/11/north-carolina-mount-pisgah-campground_51bc17e3b08aaee25052b1e501c503eb.jpg */
+    /* url("https://media.king5.com/assets/KING/images/f7378325-031e-49e6-98d6-07cb8786f52b/f7378325-031e-49e6-98d6-07cb8786f52b_1920x1080.jpg"); */
+    url("https://blog-assets.thedyrt.com/uploads/2020/11/north-carolina-mount-pisgah-campground_51bc17e3b08aaee25052b1e501c503eb.jpg");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+.cover-container {
+    max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover {
+    color:rgba(255, 255, 255, 0.5);
+    border-bottom-color:rgba(255, 255, 255, 0.5);
+}
+
+nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover {
+    color: #333;
+    text-shadow: none;
+}
