@@ -51,9 +51,19 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')))
-app.use(mongoSanitize({
-    replaceWith: '_'
-}))
+// app.use(mongoSanitize({
+//     replaceWith: '_'
+// }))
+
+app.use((req, res, next) => {
+    for (let param in req.params) {
+      if (typeof req.params[param] === 'string') {
+        req.params[param] = req.params[param].replace(/\$/g, '_').replace(/\./g, '_');
+      }
+    }
+    next();
+  });
+  
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
 
 const store = MongoStore.create({
